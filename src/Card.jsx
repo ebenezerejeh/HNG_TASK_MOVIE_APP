@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 
 const Card = ({id, title, poster_path, release_date, vote_average}) => {
-//   const {id, title, poster_path, release_date, vote_average} = 
+
     return (
    <>
    <Link className='linkStyle' to={`/SinglePage/${id}`} >
