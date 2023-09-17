@@ -12,16 +12,16 @@ const Card = ({id, title, poster_path, release_date, vote_average}) => {
 
     return (
    <>
-   <Link className='linkStyle' to={`/movies/${id}`} >
-   <figure key={id} data-testid: movie-card>
+   <Link className='linkStyle' to={`/movies/${id}`}  data-testid='movie-card' >
+   <figure key={id} >
                     <img className="card_image_ellipse" src={ellipse3} alt="card_image_ellipse"/>                                        
                     <img className="card_image_heart" src={heartImage} alt="card_image_heart" />
                     <div>
-                        <img className="movie_thumbnail" data-testid: movie-poster src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="movie_thumbnail"/>
+                        <img className="movie_thumbnail" data-testid='movie-poster' src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="movie_thumbnail"/>
                     </div>
                     <figcaption>
-                        <div className="country_date"><span>USA</span>,<span data-testid: movie-release-date>{release_date}</span></div>
-                        <div className="movie_title" data-testid: movie-title>{title}</div>
+                        <div className="country_date"><span>USA</span>,<span data-testid='movie-release-date'>{release_date}</span></div>
+                        <div className="movie_title" data-testid='movie-title'>{title}</div>
                         <div className="banner_rating section_rating">
                             <div className="imdb_rating r2">
                                 <img src={imdbLogo} alt="imdb_logo"  />

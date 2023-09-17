@@ -86,10 +86,10 @@ const SinglePage = () => {
             
             <div className="trailerHeading_container">
                 <div className="trailerHeading_nameTitle">
-                    <span className="trailerTitle" data-testid: movie-title>{title}</span>.
-                    <span className="trailerYear"data-testid: movie-release-date>{nwDateValue}</span>.
+                    <span className="trailerTitle" data-testid='movie-title'>{title}</span>.
+                    <span className="trailerYear"data-testid='movie-release-date'>{nwDateValue}</span>.
                     <span className="trailerAgeRating">PG-13</span>.
-                    <span className="trailerTime" data-testid: movie-runtime>200</span>
+                    <span className="trailerTime" data-testid='movie-runtime'>200</span>
                 </div>
                 <div className="trailerHeading_genre">
                     <span>Action</span>
@@ -101,7 +101,7 @@ const SinglePage = () => {
                 </div>
             </div>
             <div className="trailerDetails_container">
-                <div className="trailerDetails_text" data-testid: movie-overview>{overview}</div>
+                <div className="trailerDetails_text" data-testid='movie-overview'>{overview}</div>
                 <div className="trailerDetails_button">
 
                     <button className="trailerDetails_buttonOne"><img src={two_tickets} alt="twoTickets_Image"/>See Showtimes</button>
