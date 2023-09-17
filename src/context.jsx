@@ -8,7 +8,8 @@ const AppProvider = ({ children }) =>{
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const url = 'https://api.themoviedb.org/3/discover/movie?api_key=30c30bafd6c7d301589ead2812353443&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
+    // const url = 'https://api.themoviedb.org/3/discover/movie?api_key=30c30bafd6c7d301589ead2812353443&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
+    const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=30c30bafd6c7d301589ead2812353443';
   
    
 

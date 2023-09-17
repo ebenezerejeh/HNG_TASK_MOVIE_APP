@@ -10,7 +10,7 @@ const App= ()=> {
     return <BrowserRouter>
      <Routes>
       <Route path='/' element= {<Home/>} />
-      <Route path='/singlePage/:id' element= {<SinglePage/>} />
+      <Route path='/movies/:id' element= {<SinglePage/>} />
       <Route path='*' element={<Error/>}/>
 
         </Routes>
