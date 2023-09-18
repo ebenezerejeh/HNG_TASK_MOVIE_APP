@@ -22,18 +22,60 @@ import axios from 'axios'
 
 const SinglePage = () => {
     const {id} = useParams();
-    console.log(id.length);
+
+    const params = {
+        api_key: '30c30bafd6c7d301589ead2812353443',
+      };
+
+    const [dataValue, setDataValue] = useState(null);
+    const [error3, setError3] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const movieInfo = async () => {
+          try {
+            const response = await axios.get(`https://api.themoviedb.org/3/movie/${parseInt(id)}`, {
+              params: params,
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            });
     
-    console.log(typeof(parseInt(id)));
-    const {data, loading, error, setError} = useGlobalContext();
-    console.log(data);
+            if (response.status === 200) {
+              const data = response.data;
+              console.log(data)
+              setDataValue(data); 
+              setLoading(false); 
+            } else {
+              setError3(true);
+            }
+          } catch (error) {
+            console.error(error);
+            setError3(true);
+            setLoading(false); 
+          }
+        };
+    
+        movieInfo();
+      }, []);
 
-    const nwValue=data.find((item)=>{
-        return item.id===(parseInt(id));
-    })
-    console.log(nwValue);
+      
+      if (loading) {
+        return <p>Loading...</p>;
+      }
+      
+      if (error) {
+        return <p>Error: {error.message}</p>;
+      }
+      
+      console.log(dataValue);
+      
 
-    const { title, poster_path, release_date, vote_average, overview} = nwValue;
+    
+    
+
+    const {title, backdrop_path, release_date, vote_average, overview, runtime} = dataValue;
     var date = new Date(release_date);
     const nwDateValue = date.toUTCString();
     
@@ -44,6 +86,7 @@ const SinglePage = () => {
 
   return (
     <>
+    
     <div className="main_container">
         <div className="movieInfo_nav_container">
             <div className="movieInfo_logo_container">
@@ -82,14 +125,14 @@ const SinglePage = () => {
             
         </div>
         <div className="movie_info_trailer_main">
-            <div className="movieInfo_trailer_container"><img className="trailer_image" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt="trailer_image"/></div>
+            <div className="movieInfo_trailer_container"><img className="trailer_image" src={`https://image.tmdb.org/t/p/w500${backdrop_path}`} alt="trailer_image"/></div>
             
             <div className="trailerHeading_container">
                 <div className="trailerHeading_nameTitle">
                     <span className="trailerTitle" data-testid='movie-title'>{title}</span>.
                     <span className="trailerYear"data-testid='movie-release-date'>{nwDateValue}</span>.
                     <span className="trailerAgeRating">PG-13</span>.
-                    <span className="trailerTime" data-testid='movie-runtime'>200</span>
+                    <span className="trailerTime" data-testid='movie-runtime'>{runtime}</span>
                 </div>
                 <div className="trailerHeading_genre">
                     <span>Action</span>
