@@ -76,17 +76,32 @@ body{
     .movieInfo_navItems_container{
         display: flex;
         width: 60%;
+        /* background-color: #404040; */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        /* gap: 30px; */
         
         
     }
 
+    .test{
+        width: 25%;
+    }
+    
     .movieInfo_navItem{
-        /* height: 86px; */
-        width:25%;
+        /* border: 1px solid black; */
         display:flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        height: 80px;
+        
+        padding-left: 6vw;
+        padding-right: 6vw;
+
+        
     }
 
     .movieInfo_navItem:hover{
