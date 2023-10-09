@@ -1,9 +1,11 @@
 import React from 'react'
+import {BsHourglassSplit} from 'react-icons/bs'
 
 const Loading = () => {
   return (
-    <div>
-        <h1 style ={{textAlign:"center", marginTop:"200px"}}>LOADING...</h1>
+    <div className='loading_container'>
+        <span className='loading_text'>LOADING...</span>
+        <BsHourglassSplit className='hourGlass'/>
     </div>
   )
 }

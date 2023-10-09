@@ -48,11 +48,11 @@ const SinglePage = () => {
               setDataValue(data); 
               setLoading(false); 
             } else {
-              setError3(true);
+              setError(true);
             }
           } catch (error) {
             console.error(error);
-            setError3(true);
+            setError(true);
             setLoading(false); 
           }
         };
@@ -62,11 +62,11 @@ const SinglePage = () => {
 
       
       if (loading) {
-        return <p>Loading...</p>;
+        return <Loading/>;
       }
       
       if (error) {
-        return <p>Error: {error.message}</p>;
+        return <Error/>;
       }
       
       console.log(dataValue);

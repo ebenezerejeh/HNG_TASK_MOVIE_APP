@@ -9,6 +9,7 @@
 
 body{
     background-color: white;
+    /* background-color: black; */
 }
 
 .container{
@@ -20,6 +21,52 @@ body{
 .linkStyle{
     text-decoration: none;
     color:#333;
+}
+
+.hourGlass{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+}
+
+.loading_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.loading_text{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    
+}
+
+.errorLink_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+.error_link{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    display:flex;
+    margin-top: 10px;
+    gap: 10px;
+    /* background-color: #BE123C; */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+.error_link_icon{
+    margin-top: 3px;
+    height: 1.5rem;
 }
 
 @media screen and (max-width: 599px){
@@ -48,7 +95,7 @@ body{
         z-index: 3; */
         display:flex;
         flex-direction: row;
-        height: 70x;
+        height: 70px;
         width:100%;
         background-color: rgba(0, 0, 0, 0.2);
         
@@ -331,7 +378,7 @@ body{
 
     figure{
         position:relative;
-        border-radius: 12px;
+        border-radius: 10%;
         width: 80vw;
         margin-bottom: 20px;
     }
@@ -339,6 +386,16 @@ body{
     figure:hover{
         cursor:pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+    figcaption{
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: whitesmoke;
+        border-radius: 10%;
+        height: 145px;
+
     }
 
     .card_image_ellipse{
@@ -444,7 +501,7 @@ body{
 
 }
 
-@media screen and (min-width: 600px) and (max-width: 899px){
+@media screen and (min-width: 600px) and (max-width: 939px){
 
     header{
         position:relative;
@@ -735,12 +792,22 @@ body{
 
     figure{
         position:relative;
-        border-radius: 12px;
+        border-radius: 10%;
     }
 
     figure:hover{
         cursor:pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+
+    figcaption{
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: whitesmoke;
+        border-radius: 10%;
+        height: 145px;
+
     }
 
     .card_image_ellipse{
@@ -853,7 +920,7 @@ body{
 
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 940px){
     header{
         position:relative;
         height: 600px;
@@ -1132,8 +1199,8 @@ body{
     .section_body{
        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 80px;
-        width: 86.4vw;
+        gap: 35px;
+        width: 87.4vw;
                
     }
     
@@ -1141,15 +1208,24 @@ body{
         color: black;
         margin-bottom: 6px;
     }
-
+    
     figure{
         position:relative;
-        border-radius: 12px;
+        border-radius: 10%;
     }
 
     figure:hover{
         cursor:pointer;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    figcaption{
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: whitesmoke;
+        height: 145px;
+        border-radius: 10%;
+
     }
 
     .card_image_ellipse{
@@ -1195,7 +1271,7 @@ body{
     
     .movie_title{
         color: #111827;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 700;
         margin-bottom: 6px;
 
